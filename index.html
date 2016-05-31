@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PACMAN</title>
+		<!--Import Google Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="libs/jquery.min.js"></script>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="libs/materialize/css/materialize.min.css">
+		<link rel="stylesheet" href="libs/animate.css">
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="libs/materialize/js/materialize.min.js"></script>
+
+		<script src="scripts/script.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="styles/style.css">
+		<!--
+			Scene 1: Game ready
+				Button for start -> scene 2
+			Scene 2: Game In Progress
+				Ghosts (4)
+				Pacman food
+				Map
+				Pacman
+
+				Lose condition: pacman ghost hits you twice -> scene 3
+			Scene 3: Game over and replay
+				Show score
+				Button for restart -> scene 1
+		-->
+	</head>
+	<body>
+		<div>
+			<div class="audio">
+				<audio id="gameover" src="audio/gameover.wav" type="audio/wav"></audio>
+				<audio id="eating" src="audio/eating.wav" type="audio/wav"></audio>
+				<audio id="loselife" src="audio/loselife.wav" type="audio/wav"></audio>
+			</div>
+			<!-- outer scnene -->
+			<div class="container">
+				<div class="row">
+	        <div class="col s12 m6">
+	          <div class="card blue-grey darken-1">
+	            <div class="card-content white-text">
+	              <span class="card-title">PACMAN</span>
+	              <ul>
+									<li>LIVES : <span class="lives" lives="0"></span></li>
+									<li>SCORE : <span class="score" score="0"></span></li>
+								</ul>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+				<!-- <h1>PACMAN</h1>
+				<h3>Lives : </h3> -->
+					<div class="row wrapper indigo lighten-2 z-depth-2">
+					</div>
+			</div>
+			<!-- inner scenes/templates show and hide within the wrapper -->
+				<!-- scene 1 -->
+			<div class="stage hidden z-depth-3">
+				<div class="scene menu hidden  z-depth-3 yellow darken-3 container">
+					<div class="valign-wrapper button-container">
+						<button id="gamestart" class="valign waves-effect indigo waves-light btn" type="button" name="button"><i class="material-icons right send-icon">send</i>PLAY</button>
+					</div>
+				</div>
+				<!-- scene 2 -->
+				<div class="scene map hidden z-depth-3">
+				</div>
+				<!-- scene 3 -->
+				<div class="scene gameover hidden  z-depth-3 yellow darken-3 container">
+					<h3 class="white-text">GAME OVER</h3>
+					<ul>
+						<li>SCORE : <span class="score" score="0"></span></li>
+						<li><button id="gamerestart" class="valign waves-effect grey waves-light btn" type="button" name="button"><i class="material-icons right resend-icon">send</i>PLAY AGAIN</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

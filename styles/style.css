@@ -1,0 +1,114 @@
+/*char styles*/
+.char {
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.pacman {
+	width: 30px;
+	height: 30px;
+}
+.ghost {
+	width: 30px;
+	height: 30px;
+}
+
+/*wrapper*/
+.wrapper {
+	padding: 20px;
+	/*height: 800px;*/
+	/*width: 800px;*/
+	display: flex;
+	align-items: baseline;
+	margin: auto;
+	/*background-color: yellow;*/
+}
+	.scene {
+		display: inline-block;
+	}
+	.menu {
+		height: 200px;
+		background-color: pink;
+		width: 30%;
+	}
+		.menu .button-container {
+			height: inherit;
+		}
+		.menu button {
+			width: 100%;
+			/*color: white;
+			margin: 0 auto;
+			border: none;*/
+			/*background-color: blue;*/
+		}
+
+	/*map*/
+	.map {
+		/*padding: 5px;*/
+		height: 650px;
+		min-height: 650px;
+		background-color: blue;
+		width: 700px;
+		min-width: 700px;
+		margin: 0 auto;
+	}
+		.map .row {
+			display: block;
+		}
+		.mapitem {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			/*border: 1px solid black;*/
+			background-color: black;
+			float: left;
+		}
+		.mapitem.wall {
+			background-color: blue;
+		}
+		.mapitem.coin.present {
+			background-color: black;
+			background-image: url('../images/candy.png');
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.mapitem.coin {
+			background-color: black;
+			/*border: 1px solid black;*/
+		}
+		.mapitem.ghost {
+			background-color: black;
+			background-image: url('../images/red.png');
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.mapitem.pacman {
+			background-color: black;
+			/*border: 1px solid black;*/
+			background-image: url('../images/pacman.png');
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.mapitem.pacman.invulnerable {
+			background-image: none;
+		}
+	/*map*/
+	.gameover {
+		/*height: 200px;*/
+		background-color: red;
+		/*width: 40%;*/
+		/*flex: none;*/
+	}
+		.gameover button {
+			background-color: green;
+		}
+		.gameover h1, .gameover h2, .gameover button {
+			display: block;
+		}
+/*non specific styles*/
+.hidden {
+	display: none;
+}
