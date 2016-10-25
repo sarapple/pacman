@@ -1,14 +1,16 @@
 var fn = {};
 var defs = {};
 
+console.log('michael was here :)')
+
 fn.init = function() {
 	defs = {
 		blinkloop : null,
 		loop : null,
 		looptime : 1000,
-		invulnerable : 0,
+		invulnerable : 1,
 		position : 0,
-		lives : 3,
+		lives : 3000,
 		score : 0,
 		world : [
 			2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
